@@ -1,16 +1,11 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-
-const HamburgerIcon = () => ( <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" /></svg> );
-const CloseIcon = () => ( <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg> );
-
-const navLinks = [
-  { name: 'Início', path: '/' }, { name: 'Sobre', path: '/sobre' }, { name: 'Projetos', path: '/projetos' }, { name: 'Time', path: '/time' }, { name: 'Contato', path: '/contato' },
-];
+import hamburgerIconUrl from '../assets/icon-hamburger.svg';
+import closeIconUrl from '../assets/icon-close.svg';
+import { navLinks } from '../services/mockData';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   const linkClass = "font-medium hover:text-gold transition-colors duration-300";
   const activeLinkClass = "text-gold";
 
@@ -29,7 +24,10 @@ export default function Header() {
         </div>
         <div className="md:hidden">
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-            {isMobileMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
+            {isMobileMenuOpen 
+              ? <img src={closeIconUrl} alt="Fechar menu" className="w-6 h-6" /> 
+              : <img src={hamburgerIconUrl} alt="Abrir menu" className="w-6 h-6" />
+            }
           </button>
         </div>
       </nav>

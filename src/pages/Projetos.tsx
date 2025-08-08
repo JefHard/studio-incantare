@@ -1,26 +1,7 @@
-
-const projectsData = [
-  {
-    name: 'Projeto Alpha',
-    description: 'Uma plataforma inovadora de e-commerce construída com foco na experiência do usuário e performance.',
-
-    imageUrl: 'https://placehold.co/600x400/000000/D4AF37',
-  },
-  {
-    name: 'Projeto Beta',
-    description: 'Aplicativo mobile para gerenciamento de finanças pessoais, com design intuitivo e sincronização na nuvem.',
-
-    imageUrl: 'https://placehold.co/600x400/000000/D4AF37',
-  },
-  {
-    name: 'Projeto Gamma',
-    description: 'Sistema de agendamento online para clínicas, otimizando o fluxo de pacientes e a gestão de horários.',
-
-    imageUrl: 'https://placehold.co/600x400/000000/D4AF37',
-  },
-];
+import { projectsData } from '../services/mockData';
 
 export default function Projetos() {
+
   return (
     <div className="py-16">
       <section className="container mx-auto px-4 text-center mb-16">
@@ -35,7 +16,7 @@ export default function Projetos() {
       <section className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projectsData.map((project, index) => (
-  
+
             <div 
               key={index} 
               className="bg-black border border-gold/20 rounded-lg overflow-hidden shadow-lg 

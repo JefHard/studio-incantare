@@ -1,5 +1,7 @@
+
+import { manifestoFrases } from '../services/mockData';
+
 export default function Sobre() {
-  const manifestoFrases = [ "Código é poesia.", "A função precede a forma, mas a beleza inspira a função.", "Escutamos mais do que falamos." ];
 
   return (
     <div className="space-y-16 md:space-y-24 py-16">
@@ -27,13 +29,11 @@ export default function Sobre() {
       </section>
       
       <section className="container mx-auto px-4">
-
         <h2 className="text-3xl font-bold text-center mb-12">O Visionário</h2>
         <div className="bg-black border border-gold/20 rounded-lg p-8 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
           <img src="https://placehold.co/150x150/000000/D4AF37" alt="Foto do Fundador" className="w-36 h-36 rounded-full flex-shrink-0 border-4 border-gold/50" />
           <div>
             <h3 className="text-2xl font-bold">Alexandre Rios</h3>
-            
             <p className="text-gold font-semibold">Fundador & Arquiteto de Software</p>
             <p className="text-slate-400 mt-4 italic">
               "Desde o início, a visão do Studio Incantare era clara: criar tecnologia que parecesse mágica. Cada projeto é uma tela em branco, uma oportunidade de pintar com lógica e paixão, construindo soluções que não apenas funcionam, mas que encantam."
@@ -41,6 +41,7 @@ export default function Sobre() {
           </div>
         </div>
       </section>
+      
     </div>
   );
 }
