@@ -1,13 +1,10 @@
+
+
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
+import Footer from './Footer';
 
-const Footer = () => {
-  return (
-    <footer className="bg-black text-white p-4 text-center mt-auto">
-      <p>&copy; 2025 Studio Incantare. Todos os direitos reservados.</p>
-    </footer>
-  );
-};
+
 
 export const AppLayout = () => {
   return (
