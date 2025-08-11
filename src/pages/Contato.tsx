@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import AnimatedSection from '../components/AnimatedSection';
 
 const LinkedinIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-2.199 1.561-4.001 3.501-4.001s3.499 1.802 3.499 4.001v8.399h4.988v-10.131c0-4.87-3.37-8.869-7.875-8.869s-7.875 3.999-7.875 8.869v1.262z" /></svg> );
 const FacebookIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z" /></svg> );
@@ -35,14 +36,14 @@ export default function Contato() {
 
   return (
     <div className="py-16">
-      <section className="container mx-auto px-4 text-center mb-16">
+      <AnimatedSection className="container mx-auto px-4 text-center mb-16">
         <h1 className="text-4xl md:text-6xl font-bold">Fale Conosco</h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-slate-300">
           Tem uma ideia ou um projeto em mente? Adoraríamos ouvir sobre ele.
         </p>
-      </section>
+      </AnimatedSection>
 
-      <section className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+      <AnimatedSection className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
         
         <div className="bg-neutral-900 p-8 rounded-lg border border-gold/20">
           <h2 className="text-3xl font-bold mb-6">Envie uma Mensagem</h2>
@@ -88,7 +89,7 @@ export default function Contato() {
           </div>
         </div>
 
-      </section>
+      </AnimatedSection>
     </div>
   );
 }
