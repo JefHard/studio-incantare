@@ -1,11 +1,13 @@
-import { projectsData } from '../services/mockData';
+import { getProjects } from '../services/projects';
 import Card from '../components/Card';
 import AnimatedSection from '../components/AnimatedSection';
 
 export default function Projetos() {
+  
+  const projects = getProjects();
+
   return (
     <div className="py-16">
-      
       <AnimatedSection className="container mx-auto px-4 text-center mb-16">
         <h1 className="text-4xl md:text-6xl font-bold">
           Nossos Projetos
@@ -17,7 +19,7 @@ export default function Projetos() {
 
       <AnimatedSection className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {projectsData.map((project, index) => (
+          {projects.map((project, index) => (
             <Card 
               key={index}
               imageUrl={project.imageUrl}

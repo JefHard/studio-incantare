@@ -1,20 +1,23 @@
 import { Link } from 'react-router-dom';
-import { navLinks } from '../services/mockData';
 import logo from '../assets/logo.png';
+
+const navLinks = [
+  { name: 'Início', path: '/' },
+  { name: 'Sobre', path: '/sobre' },
+  { name: 'Projetos', path: '/projetos' },
+  { name: 'Time', path: '/time' },
+  { name: 'Contato', path: '/contato' },
+];
 
 export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-slate-400 py-4 border-t border-gold/20">
       <div className="container mx-auto px-4">
-
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
           
-
           <div>
-
             <Link to="/" className="flex items-center justify-center md:justify-start gap-3 hover:opacity-80 transition-opacity">
               <img src={logo} alt="Studio Incantare Logo" className="h-8" />
-
               <span className="font-bold text-sm text-white">Studio Incantare</span>
             </Link>
             <p className="text-xs italic mt-2">

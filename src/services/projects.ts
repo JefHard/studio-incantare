@@ -1,20 +1,4 @@
-
-
-export const navLinks = [
-  { name: 'Início', path: '/' },
-  { name: 'Sobre', path: '/sobre' },
-  { name: 'Projetos', path: '/projetos' },
-  { name: 'Time', path: '/time' },
-  { name: 'Contato', path: '/contato' },
-];
-
-export const manifestoFrases = [
-  "Código é poesia.",
-  "A função precede a forma, mas a beleza inspira a função.",
-  "Escutamos mais do que falamos."
-];
-
-export const projectsData = [
+const projectsData = [
   {
     name: 'Projeto Alpha',
     description: 'Uma plataforma inovadora de e-commerce construída com foco na experiência do usuário e performance.',
@@ -32,7 +16,7 @@ export const projectsData = [
   },
 ];
 
-export const teamMembers = [
+const teamMembers = [
   {
     name: 'Alexandre Rios',
     role: 'Fundador & Arquiteto de Software',
@@ -52,3 +36,12 @@ export const teamMembers = [
     imageUrl: 'https://placehold.co/400x400/000000/D4AF37',
   },
 ];
+
+
+export const getProjects = () => {
+  return projectsData;
+};
+
+export const getTeamMembers = () => {
+  return teamMembers;
+};

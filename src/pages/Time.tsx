@@ -1,8 +1,10 @@
-import { teamMembers } from '../services/mockData';
+import { getTeamMembers } from '../services/projects';
 import Card from '../components/Card';
 import AnimatedSection from '../components/AnimatedSection';
 
 export default function Time() {
+  const members = getTeamMembers();
+
   return (
     <div className="py-16">
       <AnimatedSection className="container mx-auto px-4 text-center mb-16">
@@ -13,10 +15,10 @@ export default function Time() {
           A alma da nossa empresa são as pessoas. Conheça os talentos que transformam ideias em realidade.
         </p>
       </AnimatedSection>
-      
+
       <AnimatedSection className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {teamMembers.map((member, index) => (
+          {members.map((member, index) => (
             <Card 
               key={index}
               imageUrl={member.imageUrl}

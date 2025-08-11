@@ -2,10 +2,18 @@ import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import hamburgerIconUrl from '../assets/icon-hamburger.svg';
 import closeIconUrl from '../assets/icon-close.svg';
-import { navLinks } from '../services/mockData';
+
+const navLinks = [
+  { name: 'Início', path: '/' },
+  { name: 'Sobre', path: '/sobre' },
+  { name: 'Projetos', path: '/projetos' },
+  { name: 'Time', path: '/time' },
+  { name: 'Contato', path: '/contato' },
+];
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const linkClass = "font-medium hover:text-gold transition-colors duration-300";
   const activeLinkClass = "text-gold";
 

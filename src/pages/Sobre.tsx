@@ -1,4 +1,4 @@
-import { manifestoFrases } from '../services/mockData';
+import { manifestoFrases } from '../globals';
 import AnimatedSection from '../components/AnimatedSection';
 
 export default function Sobre() {
